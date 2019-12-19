@@ -3,10 +3,13 @@
 ### Prerequisites:
 - Install Vagrant.
 - Install VirtualBox.
-- Install Ruby.
-- Install bundle.
 
 ### To run
-- From inside the folder vagrant102-provisioning, run 'vagrant up'.
-- The app should now be running. Open your browser and load 'development.local:3000'
-- This should take you to the front page of the app.
+- From inside the folder, run 'vagrant up'.
+- SSH into the virtual machine using 'vagrant ssh'.
+- Move to the app folder using 'cd /app'
+- Run 'npm install'
+- Run 'npm start &'
+- Open your browser and go to development.local:3000. You should see the front page.
+- To run the tests, exit the VM using 'exit' and then enter 'cd environment/spec-tests'/
+- Then run rake spec. All tests should pass.
